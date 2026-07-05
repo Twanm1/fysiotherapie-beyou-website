@@ -3,11 +3,13 @@
 import React, { useState } from 'react';
 import { MessageCircle, X, Send, Clock } from 'lucide-react';
 
+import { CONTACT } from '@/lib/contact-info';
+
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   
-  const phoneNumber = '31618665863';
+  const phoneNumber = CONTACT.whatsapp.tel.replace('+', '');
 
   const handleSend = () => {
     if (!message.trim()) return;

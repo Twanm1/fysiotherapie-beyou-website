@@ -2,6 +2,8 @@
 
 import Link from "next/link"
 import React from 'react';
+import ContactDetails from '@/components/shared/ContactDetails';
+import { CONTACT } from '@/lib/contact-info';
 
 export default function Footer() {
   return (
@@ -19,7 +21,7 @@ export default function Footer() {
               <span className="font-semibold text-[15px] text-foreground">Fysiotherapie BeYou</span>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-1">&ldquo;Wat beweegt jou&rdquo;</p>
-            <p className="text-gray-600 text-sm">Burgemeester Musquetiersingel 8A<br />2636 GE Schipluiden</p>
+            <p className="text-gray-600 text-sm">{CONTACT.address.street}<br />{CONTACT.address.postalCode} {CONTACT.address.city}</p>
           </div>
 
           {/* Nav links */}
@@ -46,14 +48,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <p className="text-xs sm:text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Contact</p>
-            <div className="flex flex-col gap-3">
-              <a href="tel:+31618665863" className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-0.5">
-                +31 6 18665863
-              </a>
-              <a href="mailto:info@fysiotherapiebeyou.nl" className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-0.5">
-                info@fysiotherapiebeyou.nl
-              </a>
-            </div>
+            <ContactDetails variant="footer" showEmail />
           </div>
         </div>
 

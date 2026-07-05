@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { submitContactForm } from "@/lib/api-client";
-import { Phone, Mail, MapPin, CheckCircle, AlertCircle } from 'lucide-react';
+import { CheckCircle, AlertCircle } from 'lucide-react';
+import ContactDetails from '@/components/shared/ContactDetails';
 
 export default function ContactForm({ source = 'fysiotherapiebeyou', formTitle = 'We helpen je graag verder.' }) {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', website: '' });
@@ -172,35 +173,7 @@ export default function ContactForm({ source = 'fysiotherapiebeyou', formTitle =
                 We reageren doorgaans binnen één werkdag. Een verwijzing van de huisarts is niet nodig.
               </p>
 
-              <div className="space-y-6">
-                <a href="tel:+31618665863" className="flex items-start gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors group">
-                  <span className="w-9 h-9 rounded-xl bg-white/50 flex items-center justify-center shrink-0 group-hover:bg-primary/15 transition-colors">
-                    <Phone className="w-4 h-4 text-gray-600" />
-                  </span>
-                  <div>
-                    <p className="text-xs text-gray-600 mb-0.5">Telefoon / WhatsApp</p>
-                    <p className="text-gray-900 font-medium">+31 6 18665863</p>
-                  </div>
-                </a>
-                <a href="mailto:info@fysiotherapiebeyou.nl" className="flex items-start gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors group">
-                  <span className="w-9 h-9 rounded-xl bg-white/50 flex items-center justify-center shrink-0 group-hover:bg-primary/15 transition-colors">
-                    <Mail className="w-4 h-4 text-gray-600" />
-                  </span>
-                  <div>
-                    <p className="text-xs text-gray-600 mb-0.5">E-mail</p>
-                    <p className="text-gray-900 font-medium">info@fysiotherapiebeyou.nl</p>
-                  </div>
-                </a>
-                <div className="flex items-start gap-3 text-sm">
-                  <span className="w-9 h-9 rounded-xl bg-white/50 flex items-center justify-center shrink-0">
-                    <MapPin className="w-4 h-4 text-gray-600" />
-                  </span>
-                  <div>
-                    <p className="text-xs text-gray-600 mb-0.5">Adres</p>
-                    <p className="text-gray-900">Burgemeester Musquetiersingel 8A<br />2636 GE Schipluiden</p>
-                  </div>
-                </div>
-              </div>
+              <ContactDetails variant="sidebar" />
             </div>
           </div>
         </div>

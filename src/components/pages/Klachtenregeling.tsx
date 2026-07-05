@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Mail } from 'lucide-react'
+import { CONTACT } from '@/lib/contact-info'
 
 export default function Klachtenregeling() {
 
@@ -39,11 +40,11 @@ export default function Klachtenregeling() {
               Je kunt ons persoonlijk aanspreken, bellen of een e-mail sturen naar:
             </p>
             <a
-              href="mailto:info@fysiotherapiebeyou.nl"
+              href={`mailto:${CONTACT.email}`}
               className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
             >
               <Mail className="w-4 h-4" />
-              info@fysiotherapiebeyou.nl
+              {CONTACT.email}
             </a>
           </div>
 
@@ -61,12 +62,16 @@ export default function Klachtenregeling() {
         <div className="mt-12 p-6 bg-blue-50 rounded-xl border border-blue-100">
           <p className="text-sm text-gray-700">
             Vragen? Neem gerust contact op via{' '}
-            <a href="mailto:info@fysiotherapiebeyou.nl" className="text-primary font-medium hover:underline">
-              info@fysiotherapiebeyou.nl
+            <a href={`mailto:${CONTACT.email}`} className="text-primary font-medium hover:underline">
+              {CONTACT.email}
             </a>{' '}
             of bel{' '}
-            <a href="tel:+31618665863" className="text-primary font-medium hover:underline">
-              +31 6 18665863
+            <a href={`tel:${CONTACT.whatsapp.tel}`} className="text-primary font-medium hover:underline">
+              {CONTACT.whatsapp.display}
+            </a>{' '}
+            (WhatsApp) of{' '}
+            <a href={`tel:${CONTACT.practicePhone.tel}`} className="text-primary font-medium hover:underline">
+              {CONTACT.practicePhone.display}
             </a>.
           </p>
         </div>

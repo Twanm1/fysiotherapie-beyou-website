@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { CONTACT } from '@/lib/contact-info'
 
 const sections = [
   {
@@ -7,7 +8,7 @@ const sections = [
   },
   {
     title: 'E-mail en digitale communicatie',
-    content: 'Wij doen ons best om e-mails die worden verzonden naar info@fysiotherapiebeyou.nl zorgvuldig en tijdig te behandelen. Houd er echter rekening mee dat de ontvangst en veiligheid van e-mailverkeer niet volledig gegarandeerd kunnen worden. Als u ervoor kiest om zonder versleuteling of wachtwoordbeveiliging met ons te communiceren, aanvaardt u zelf de mogelijke risico\'s van elektronische gegevensoverdracht.',
+    content: `Wij doen ons best om e-mails die worden verzonden naar ${CONTACT.email} zorgvuldig en tijdig te behandelen. Houd er echter rekening mee dat de ontvangst en veiligheid van e-mailverkeer niet volledig gegarandeerd kunnen worden. Als u ervoor kiest om zonder versleuteling of wachtwoordbeveiliging met ons te communiceren, aanvaardt u zelf de mogelijke risico's van elektronische gegevensoverdracht.`,
   },
   {
     title: 'Externe links',
@@ -54,8 +55,8 @@ export default function Disclaimer() {
         <div className="mt-12 p-6 bg-blue-50 rounded-xl border border-blue-100">
           <p className="text-sm text-gray-700">
             Vragen over deze disclaimer?{' '}
-            <a href="mailto:info@fysiotherapiebeyou.nl" className="text-primary font-medium hover:underline">
-              info@fysiotherapiebeyou.nl
+            <a href={`mailto:${CONTACT.email}`} className="text-primary font-medium hover:underline">
+              {CONTACT.email}
             </a>
           </p>
         </div>

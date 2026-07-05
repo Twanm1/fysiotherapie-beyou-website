@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { CONTACT } from './contact-info'
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from './site'
 
 type PageMetadataOptions = {
@@ -59,13 +60,13 @@ export const medicalBusinessJsonLd = {
   image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
   description:
     'Fysiotherapie BeYou in Schipluiden biedt persoonlijke fysiotherapie, leefstijlcoaching (GLI) en begeleide trainingen.',
-  telephone: '+31618665863',
-  email: 'info@fysiotherapiebeyou.nl',
+  telephone: CONTACT.whatsapp.tel,
+  email: CONTACT.email,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Burgemeester Musquetiersingel 8A',
-    postalCode: '2636 GE',
-    addressLocality: 'Schipluiden',
+    streetAddress: CONTACT.address.street,
+    postalCode: CONTACT.address.postalCode,
+    addressLocality: CONTACT.address.city,
     addressCountry: 'NL',
   },
   geo: { '@type': 'GeoCoordinates', latitude: 51.9748, longitude: 4.3116 },
@@ -98,13 +99,19 @@ type BlogPostingInput = {
   publish_date?: string
 }
 
+function absoluteAssetUrl(path?: string) {
+  if (!path) return `${SITE_URL}${DEFAULT_OG_IMAGE}`
+  if (path.startsWith('http')) return path
+  return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`
+}
+
 export function blogPostingJsonLd(post: BlogPostingInput) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
-    image: post.image_url || `${SITE_URL}${DEFAULT_OG_IMAGE}`,
+    image: absoluteAssetUrl(post.image_url),
     datePublished: post.publish_date,
     author: { '@type': 'Person', name: 'Twan Mosch' },
     publisher: {

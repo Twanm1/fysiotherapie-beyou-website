@@ -2,10 +2,11 @@ import type { Metadata, Viewport } from 'next'
 import ClientToaster from '@/components/shared/ClientToaster'
 import JsonLd from '@/components/JsonLd'
 import { medicalBusinessJsonLd } from '@/lib/seo'
+import { SITE_URL } from '@/lib/site'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.fysiotherapiebeyou.nl'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Fysiotherapie BeYou | Fysiotherapie, Leefstijlcoaching & Trainingen in Schipluiden',
     template: '%s | Fysiotherapie BeYou',
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     'BeYou',
   ],
   icons: {
-    icon: 'https://framerusercontent.com/images/39T3NYh2RTzdtqcUOLKHcbYTs.png?width=64&height=64',
+    icon: '/images/hero-team.png',
   },
   robots: { index: true, follow: true },
 }

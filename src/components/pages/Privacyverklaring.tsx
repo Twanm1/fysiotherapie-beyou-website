@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { CONTACT } from '@/lib/contact-info'
 
 const sections = [
   {
@@ -115,8 +116,8 @@ export default function Privacyverklaring() {
           <p className="text-sm text-gray-700 font-medium mb-1">Vragen of klachten?</p>
           <p className="text-sm text-gray-700">
             Heeft u vragen over hoe wij uw gegevens bewaren of delen? Neem gerust contact op via{' '}
-            <a href="mailto:info@fysiotherapiebeyou.nl" className="text-primary font-medium hover:underline">
-              info@fysiotherapiebeyou.nl
+            <a href={`mailto:${CONTACT.email}`} className="text-primary font-medium hover:underline">
+              {CONTACT.email}
             </a>.
           </p>
         </div>

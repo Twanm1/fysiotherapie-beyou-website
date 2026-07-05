@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ContactForm from '@/components/shared/ContactForm'
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react'
+import ContactDetails from '@/components/shared/ContactDetails'
+import { CONTACT } from '@/lib/contact-info'
 
 const focuspunten = [
   'Gezonder eten',
@@ -17,7 +18,7 @@ const verwachtingen = [
 const praktisch = [
   'De definitieve startdata hoor je nog, dit zal eind februari/begin maart zijn',
   'De groepsbijeenkomsten zullen op woensdagavond plaatsvinden',
-  'Locatie: Burgemeester Musquetiersingel 8a-b, 2636 GE, Schipluiden',
+  `Locatie: ${CONTACT.address.line}`,
 ];
 
 export default function Leefstijlcoaching() {
@@ -147,20 +148,7 @@ export default function Leefstijlcoaching() {
               {/* Contact */}
               <div className="glass-card rounded-2xl p-7 bg-white border border-gray-200">
                 <h3 className="text-sm font-semibold text-gray-900 mb-4">Contactgegevens</h3>
-                <div className="space-y-3">
-                  <a href="tel:+31618665863" className="flex items-center gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors">
-                    <Phone className="w-4 h-4 shrink-0" /> +31 6 18665863
-                  </a>
-                  <a href="https://wa.me/31618665863" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors">
-                    <MessageCircle className="w-4 h-4 shrink-0" /> WhatsApp
-                  </a>
-                  <a href="mailto:info@fysiotherapiebeyou.nl" className="flex items-center gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors">
-                    <Mail className="w-4 h-4 shrink-0" /> info@fysiotherapiebeyou.nl
-                  </a>
-                  <div className="flex items-start gap-3 text-sm text-gray-700">
-                    <MapPin className="w-4 h-4 shrink-0 mt-0.5" /> Burgemeester Musquetiersingel 8A, 2636 GE Schipluiden
-                  </div>
-                </div>
+                <ContactDetails variant="inline" />
                 <Link
                   href="/contact"
                   className="bg-primary text-white w-full mt-5 py-3 text-sm font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg block text-center"

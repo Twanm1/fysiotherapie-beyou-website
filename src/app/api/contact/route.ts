@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { checkContactRateLimit } from '@/lib/contact-rate-limit'
+import { contactPhoneSummary, CONTACT } from '@/lib/contact-info'
 import { sendViaFormSubmit } from '@/lib/formsubmit-mail'
 import { isSendGridConfigured, sendContactEmails } from '@/lib/sendgrid-mail'
 import type { ContactFormPayload } from '@/lib/types'
@@ -69,6 +70,15 @@ export async function POST(request: NextRequest) {
     if (isSendGridConfigured()) {
       await sendContactEmails(payload)
       return NextResponse.json({ success: true, confirmationSent: true, provider: 'sendgrid' })
+    }
+
+    if (process.env.NODE_ENV === 'production') {
+      return NextResponse.json(
+        {
+          error: `Het contactformulier is tijdelijk niet beschikbaar. ${contactPhoneSummary()} of mail naar ${CONTACT.email}.`,
+        },
+        { status: 503 }
+      )
     }
 
     await sendViaFormSubmit(payload)

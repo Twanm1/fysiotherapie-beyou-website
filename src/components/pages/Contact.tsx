@@ -1,6 +1,7 @@
 import ContactForm from '@/components/shared/ContactForm'
 import GoogleMapsEmbed from '@/components/shared/GoogleMapsEmbed'
 import GoogleVirtualTourEmbed from '@/components/shared/GoogleVirtualTourEmbed'
+import { CONTACT } from '@/lib/contact-info'
 import { GOOGLE_VIRTUAL_TOUR_VIEW_URL } from '@/data/google-maps-tour'
 import { GOOGLE_MAPS_URL } from '@/data/google-reviews'
 import { ExternalLink, ScanEye } from 'lucide-react'
@@ -38,7 +39,7 @@ export default function Contact() {
                 Vind ons op Google Maps
               </h2>
               <p className="text-gray-600 text-sm mt-2">
-                Burgemeester Musquetiersingel 8A, 2636 GE Schipluiden
+                {CONTACT.address.line}
               </p>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-3 text-sm">
                 <a

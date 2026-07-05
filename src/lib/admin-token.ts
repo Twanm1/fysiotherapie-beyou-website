@@ -27,5 +27,10 @@ export async function isValidAdminToken(token: string | undefined, secret: strin
 }
 
 export function getAdminSecret(): string {
-  return process.env.ADMIN_PASSWORD || 'beyou-admin'
+  const secret = process.env.ADMIN_PASSWORD?.trim()
+  if (secret) return secret
+  if (process.env.NODE_ENV === 'production') {
+    throw new Error('ADMIN_PASSWORD is niet geconfigureerd')
+  }
+  return 'beyou-admin'
 }

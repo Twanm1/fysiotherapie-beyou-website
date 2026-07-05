@@ -1,4 +1,4 @@
-const BASE = process.env.BASE_URL || 'http://localhost:3005'
+const BASE = process.env.BASE_URL || 'http://localhost:3000'
 
 const pages = [
   '/',

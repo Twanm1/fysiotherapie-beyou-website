@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { CONTACT } from '@/lib/contact-info'
 
 const articles = [
   {
@@ -27,7 +28,7 @@ const articles = [
   },
   {
     title: 'Artikel 7 – Klachtenregeling',
-    content: 'Fysiotherapie Be You is aangesloten bij een erkende klachtenregeling via het Keurmerk Fysiotherapie of een vergelijkbare beroepsorganisatie. Heeft u een klacht over uw behandeling? Neem dan eerst contact op met uw behandelaar of mail naar info@fysiotherapiebeyou.nl. We zoeken graag samen naar een oplossing.',
+    content: `Fysiotherapie Be You is aangesloten bij een erkende klachtenregeling via het Keurmerk Fysiotherapie of een vergelijkbare beroepsorganisatie. Heeft u een klacht over uw behandeling? Neem dan eerst contact op met uw behandelaar of mail naar ${CONTACT.email}. We zoeken graag samen naar een oplossing.`,
   },
   {
     title: 'Artikel 8 – Toepasselijk recht',
@@ -70,8 +71,8 @@ export default function Voorwaarden() {
         <div className="mt-12 p-6 bg-blue-50 rounded-xl border border-blue-100">
           <p className="text-sm text-gray-700">
             Vragen over onze voorwaarden?{' '}
-            <a href="mailto:info@fysiotherapiebeyou.nl" className="text-primary font-medium hover:underline">
-              info@fysiotherapiebeyou.nl
+            <a href={`mailto:${CONTACT.email}`} className="text-primary font-medium hover:underline">
+              {CONTACT.email}
             </a>
           </p>
         </div>

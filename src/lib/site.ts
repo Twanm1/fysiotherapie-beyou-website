@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://www.fysiotherapiebeyou.nl'
+export const SITE_URL = (process.env.SITE_URL ?? 'https://www.fysiotherapiebeyou.nl').replace(/\/$/, '')
 export const SITE_NAME = 'Fysiotherapie BeYou'
 
 export const DEFAULT_OG_IMAGE = '/images/hero-team.png'

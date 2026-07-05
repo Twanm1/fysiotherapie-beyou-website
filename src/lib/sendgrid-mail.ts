@@ -1,4 +1,5 @@
 import sgMail from '@sendgrid/mail'
+import { contactPhoneSummary, CONTACT } from './contact-info'
 
 const SITE_NAME = 'Fysiotherapie BeYou'
 const SITE_URL = (process.env.SITE_URL ?? 'https://www.fysiotherapiebeyou.nl').replace(/\/$/, '')
@@ -33,9 +34,10 @@ function emailLayout(content: string) {
         </td></tr>
         <tr><td style="padding:28px;">${content}</td></tr>
         <tr><td style="padding:0 28px 24px;font-size:12px;line-height:1.6;color:#6b7280;">
-          <p style="margin:0;">Burgemeester Musquetiersingel 8A · 2636 GE Schipluiden<br>
-          <a href="tel:+31618665863" style="color:#4586ff;text-decoration:none;">+31 6 18665863</a> ·
-          <a href="mailto:info@fysiotherapiebeyou.nl" style="color:#4586ff;text-decoration:none;">info@fysiotherapiebeyou.nl</a></p>
+          <p style="margin:0;">${CONTACT.address.line}<br>
+          <a href="tel:${CONTACT.whatsapp.tel}" style="color:#4586ff;text-decoration:none;">WhatsApp ${CONTACT.whatsapp.display}</a> ·
+          <a href="tel:${CONTACT.practicePhone.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.practicePhone.display}</a> ·
+          <a href="mailto:${CONTACT.email}" style="color:#4586ff;text-decoration:none;">${CONTACT.email}</a></p>
         </td></tr>
       </table>
     </td></tr>
@@ -76,7 +78,8 @@ function confirmationEmailHtml(payload: ContactMailPayload) {
       <p style="margin:0;font-size:14px;line-height:1.7;color:#374151;white-space:pre-wrap;">${escapeHtml(payload.message)}</p>
     </div>
     <p style="margin:20px 0 0;font-size:14px;line-height:1.7;color:#374151;">
-      Spoed of liever bellen? Neem contact op via <a href="tel:+31618665863" style="color:#4586ff;text-decoration:none;">+31 6 18665863</a>.
+      Spoed of liever bellen? WhatsApp <a href="tel:${CONTACT.whatsapp.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.whatsapp.display}</a>
+      of bel <a href="tel:${CONTACT.practicePhone.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.practicePhone.display}</a>.
     </p>
     <p style="margin:16px 0 0;font-size:14px;">
       <a href="${SITE_URL}" style="display:inline-block;background:#4586ff;color:#ffffff;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;font-size:14px;">Bezoek onze website</a>
@@ -91,7 +94,7 @@ export function isSendGridConfigured() {
 export async function sendContactEmails(payload: ContactMailPayload) {
   const apiKey = process.env.SENDGRID_API_KEY?.trim()
   const fromEmail = process.env.SENDGRID_FROM_EMAIL?.trim()
-  const contactEmail = process.env.CONTACT_EMAIL?.trim() || 'info@fysiotherapiebeyou.nl'
+  const contactEmail = process.env.CONTACT_EMAIL?.trim() || CONTACT.email
 
   if (!apiKey || !fromEmail) {
     throw new Error('SendGrid is niet geconfigureerd (SENDGRID_API_KEY / SENDGRID_FROM_EMAIL)')
@@ -132,7 +135,7 @@ export async function sendContactEmails(payload: ContactMailPayload) {
         'Jouw bericht:',
         payload.message,
         '',
-        `Telefoon: +31 6 18665863`,
+        contactPhoneSummary(),
         `Website: ${SITE_URL}`,
       ].join('\n'),
     },

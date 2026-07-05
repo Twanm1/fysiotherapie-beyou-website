@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
 import PageNotFound from '@/components/PageNotFound'
 import SiteLayout from '@/components/layout/SiteLayout'
 import { Providers } from '@/components/providers'
+
+export const metadata: Metadata = {
+  title: 'Pagina niet gevonden',
+  robots: { index: false, follow: false },
+}
 
 export default function NotFound() {
   return (

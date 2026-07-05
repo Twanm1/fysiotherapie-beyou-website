@@ -1,4 +1,6 @@
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'info@fysiotherapiebeyou.nl'
+import { CONTACT } from '@/lib/contact-info'
+
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || CONTACT.email
 
 export type ContactMailPayload = {
   name: string
