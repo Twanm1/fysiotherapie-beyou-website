@@ -1,0 +1,15 @@
+---
+description: Open de website in de Cursor-browser bij wijzigingen
+alwaysApply: true
+---
+
+# Browser preview
+
+Bij visuele wijzigingen aan de website:
+
+1. Zorg dat `npm run dev` draait (http://localhost:3000).
+2. Open de site in de **Cursor-browser** met `position: "active"` zodat de gebruiker het direct ziet.
+3. Scroll naar de gewijzigde sectie en toon een screenshot als dat relevant is.
+4. Herlaad de pagina na code-wijzigingen als hot reload niet zichtbaar is.
+
+Gebruik `http://localhost:3000` (niet de live productiesite) tenzij de dev-server niet draait.

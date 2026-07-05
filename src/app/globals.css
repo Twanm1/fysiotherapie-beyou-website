@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+    --primary: 221 100% 64%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 92%;
+    --secondary-foreground: 210 11% 15%;
+    --muted: 210 12% 80%;
+    --muted-foreground: 210 8% 50%;
+    --accent: 221 100% 64%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 16% 93%;
+    --input: 210 16% 93%;
+    --ring: 221 100% 64%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 11% 15%;
+    --sidebar-primary: 221 100% 64%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 92%;
+    --sidebar-accent-foreground: 210 11% 15%;
+    --sidebar-border: 210 16% 93%;
+    --sidebar-ring: 221 100% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
+  body {
+    @apply bg-white text-foreground antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  @media (min-width: 640px) {
+    input,
+    textarea,
+    select {
+      font-size: inherit;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  p {
+    @apply leading-[1.65];
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .content-card {
+    @apply bg-white border border-gray-200 rounded-2xl shadow-sm;
+  }
+
+  .page-hero {
+    @apply relative pb-14 md:pb-16;
+  }
+
+  .page-hero--center {
+    @apply page-hero text-center;
+  }
+
+  .page-hero__bg {
+    @apply absolute inset-0 bg-gradient-to-b from-white via-gray-50/80 to-white pointer-events-none;
+  }
+
+  .page-section {
+    @apply py-14 md:py-20;
+  }
+
+  .eyebrow {
+    @apply flex items-center gap-2 mb-4;
+  }
+
+  .eyebrow--center {
+    @apply eyebrow justify-center;
+  }
+
+  .eyebrow__dot {
+    @apply w-2 h-2 rounded-full bg-primary shrink-0;
+  }
+
+  .eyebrow__label {
+    @apply text-sm font-medium text-gray-600;
+  }
+}
+
+@layer utilities {
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass-card {
+    @apply bg-white border border-gray-200/60 rounded-xl;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .glass-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .glow-primary {
+    box-shadow: 0 8px 48px rgba(69, 134, 255, 0.14), 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white font-medium px-6 py-3 rounded-full;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-primary/90 hover:shadow-lg;
+    @apply active:scale-95;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply shadow-lg;
+  }
+
+  .section-divider {
+    @apply bg-gradient-to-r from-transparent via-gray-200/50 to-transparent;
+    height: 1px;
+  }
+
+  .section-padding {
+    @apply py-14 md:py-20 lg:py-24;
+  }
+
+  .section-padding-tight {
+    @apply py-12 md:py-16;
+  }
+
+  .text-gradient {
+    display: inline;
+    overflow: visible;
+    padding-bottom: 0.35em;
+    line-height: 1.5;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: linear-gradient(to right, hsl(var(--primary)), rgb(37 99 235));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
