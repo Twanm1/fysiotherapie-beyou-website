@@ -14,7 +14,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         Naar hoofdinhoud
       </a>
       <Header />
-      <main id="main-content" className="flex-1 pt-[7.5rem] sm:pt-28 pb-24 scroll-mt-28" role="main">
+      <main id="main-content" className="site-main flex-1 scroll-mt-28" role="main">
         {children}
       </main>
       <Footer />

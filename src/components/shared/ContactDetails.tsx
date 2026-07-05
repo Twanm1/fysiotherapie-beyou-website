@@ -88,20 +88,20 @@ export default function ContactDetails({
           href={CONTACT.whatsapp.waMe}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-0.5"
+          className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-2 min-h-11 flex items-center touch-manipulation"
         >
           WhatsApp: {CONTACT.whatsapp.display}
         </a>
         <a
           href={`tel:${CONTACT.practicePhone.tel}`}
-          className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-0.5"
+          className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-2 min-h-11 flex items-center touch-manipulation"
         >
           {CONTACT.practicePhone.label}: {CONTACT.practicePhone.display}
         </a>
         {showEmail && (
           <a
             href={`mailto:${CONTACT.email}`}
-            className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-0.5"
+            className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-2 min-h-11 flex items-center touch-manipulation"
           >
             {CONTACT.email}
           </a>
@@ -116,7 +116,7 @@ export default function ContactDetails({
         href={CONTACT.whatsapp.waMe}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors"
+        className="flex items-center gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 min-h-11 touch-manipulation"
       >
         <MessageCircle className="w-4 h-4 shrink-0" />
         <span>
@@ -128,7 +128,7 @@ export default function ContactDetails({
       </a>
       <a
         href={`tel:${CONTACT.practicePhone.tel}`}
-        className="flex items-center gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors"
+        className="flex items-center gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 min-h-11 touch-manipulation"
       >
         <Phone className="w-4 h-4 shrink-0" />
         <span>
@@ -138,7 +138,7 @@ export default function ContactDetails({
       {showEmail && (
         <a
           href={`mailto:${CONTACT.email}`}
-          className="flex items-center gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors"
+          className="flex items-center gap-3 text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 min-h-11 touch-manipulation"
         >
           <Mail className="w-4 h-4 shrink-0" /> {CONTACT.email}
         </a>

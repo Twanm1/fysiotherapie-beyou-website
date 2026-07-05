@@ -61,7 +61,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
               <img
                 src={post.image_url}
                 alt={post.title}
-                className="w-full h-[380px] md:h-[500px] object-cover"
+                className="w-full h-auto max-h-[min(28rem,70vh)] md:max-h-[32rem] object-contain bg-gray-50/80"
                 loading="eager"
               />
             </div>
@@ -72,7 +72,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
           <div className="blog-content">
             {isHtmlContent(post.content) ? (
               <div
-                className="blog-content-html text-gray-700 leading-[1.85] text-base [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-2 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:mb-5 [&_ul]:my-5 [&_ul]:space-y-2 [&_ol]:my-5 [&_ol]:space-y-2"
+                className="blog-content-html text-gray-700 leading-[1.85] text-base break-words [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-2 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:mb-5 [&_ul]:my-5 [&_ul]:space-y-2 [&_ol]:my-5 [&_ol]:space-y-2 [&_img]:max-w-full [&_img]:h-auto [&_table]:block [&_table]:max-w-full [&_table]:overflow-x-auto [&_iframe]:max-w-full [&_video]:max-w-full"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             ) : (

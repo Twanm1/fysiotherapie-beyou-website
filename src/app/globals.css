@@ -81,6 +81,21 @@
     @apply w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
+  .site-header {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .site-main {
+    padding-top: calc(7.75rem + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  @media (min-width: 1024px) {
+    .site-main {
+      padding-top: calc(7rem + env(safe-area-inset-top, 0px));
+    }
+  }
+
   .content-card {
     @apply bg-white border border-gray-200 rounded-2xl shadow-sm;
   }
@@ -98,7 +113,7 @@
   }
 
   .page-section {
-    @apply py-14 md:py-20;
+    @apply py-12 md:py-20;
   }
 
   .eyebrow {
@@ -157,7 +172,7 @@
   }
 
   .section-padding {
-    @apply py-14 md:py-20 lg:py-24;
+    @apply py-12 md:py-20 lg:py-24;
   }
 
   .section-padding-tight {

@@ -45,7 +45,7 @@ export default function WhyBeYou() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1.5 sm:mb-2">{p.title}</h3>
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{p.description}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{p.description}</p>
                   </div>
                 </div>
               ))}

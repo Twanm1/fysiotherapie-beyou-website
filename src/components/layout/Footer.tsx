@@ -7,7 +7,7 @@ import { CONTACT } from '@/lib/contact-info';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 py-14">
+    <footer className="bg-gray-50 border-t border-gray-200 py-12 sm:py-14 pb-[calc(3rem+env(safe-area-inset-bottom,0px))]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
@@ -37,7 +37,7 @@ export default function Footer() {
               ].map((link) => (
                 <Link key={link.label}
                   href={link.path}
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-0.5"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-2 min-h-11 flex items-center touch-manipulation"
                 >
                   {link.label}
                 </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
             ].map((link) => (
               <Link key={link.label}
                 href={link.path}
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-2 px-1 min-h-11 inline-flex items-center touch-manipulation"
               >
                 {link.label}
               </Link>

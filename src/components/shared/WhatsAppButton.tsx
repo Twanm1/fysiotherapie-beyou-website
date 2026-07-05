@@ -57,16 +57,17 @@ export default function WhatsAppButton() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="min-w-11 min-h-11 flex items-center justify-center rounded-xl text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors touch-manipulation"
+                aria-label="Sluiten"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Hours */}
-            <div className="flex items-center gap-2 text-xs text-gray-600 bg-white/60 rounded-xl px-3 py-2 w-fit">
-              <Clock className="w-3.5 h-3.5" />
-              <span>Ma-Vr 08:00 - 18:00 · Za 10:00 - 11:30</span>
+            <div className="flex items-center gap-2 text-xs text-gray-600 bg-white/60 rounded-xl px-3 py-2 max-w-full">
+              <Clock className="w-3.5 h-3.5 shrink-0" />
+              <span className="leading-snug">Ma-Vr 08:00 - 18:00 · Za 10:00 - 11:30</span>
             </div>
           </div>
 

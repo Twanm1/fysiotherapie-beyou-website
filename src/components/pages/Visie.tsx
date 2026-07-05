@@ -69,7 +69,7 @@ export default function Visie() {
               <img
                 src="https://framerusercontent.com/images/maQyCl9FjrcMCG7Dm0zrNi6TwV4.jpeg?width=1200&height=1600"
                 alt="BeYou team"
-                className="w-full h-[480px] object-cover object-top"
+                className="w-full h-[280px] sm:h-[360px] md:h-[420px] lg:h-[480px] object-cover object-top"
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent pointer-events-none" />

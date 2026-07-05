@@ -44,7 +44,7 @@ export default function GoogleRatingBadge({
         <span className={`${scoreClass} font-bold text-gray-900 leading-none tabular-nums tracking-tight`}>
           {formatRating(rating)}
         </span>
-        <span className="text-[11px] text-gray-500 leading-none whitespace-nowrap">{subtitle}</span>
+        <span className="text-[11px] text-gray-500 leading-snug sm:whitespace-nowrap">{subtitle}</span>
       </div>
     </>
   )
