@@ -6,6 +6,7 @@ export const CONTACT = {
     tel: '+31618665863',
     waMe: 'https://wa.me/31618665863',
     recommended: true,
+    recommendedLabel: '(aanbevolen)',
   },
   practicePhone: {
     label: 'Praktijktelefoon',
@@ -20,6 +21,11 @@ export const CONTACT = {
   },
 } as const
 
+export function whatsappContactLine() {
+  const line = `${CONTACT.whatsapp.label}: ${CONTACT.whatsapp.display}`
+  return CONTACT.whatsapp.recommended ? `${line} ${CONTACT.whatsapp.recommendedLabel}` : line
+}
+
 export function contactPhoneSummary() {
-  return `WhatsApp ${CONTACT.whatsapp.display} of bel ${CONTACT.practicePhone.display}`
+  return `${whatsappContactLine()} of bel ${CONTACT.practicePhone.display}`
 }

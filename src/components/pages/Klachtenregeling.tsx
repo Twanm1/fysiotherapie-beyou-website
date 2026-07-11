@@ -67,7 +67,7 @@ export default function Klachtenregeling() {
             </a>{' '}
             of bel{' '}
             <a href={`tel:${CONTACT.whatsapp.tel}`} className="text-primary font-medium hover:underline">
-              {CONTACT.whatsapp.display}
+              {CONTACT.whatsapp.display} {CONTACT.whatsapp.recommendedLabel}
             </a>{' '}
             (WhatsApp) of{' '}
             <a href={`tel:${CONTACT.practicePhone.tel}`} className="text-primary font-medium hover:underline">

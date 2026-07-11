@@ -35,7 +35,7 @@ function emailLayout(content: string) {
         <tr><td style="padding:28px;">${content}</td></tr>
         <tr><td style="padding:0 28px 24px;font-size:12px;line-height:1.6;color:#6b7280;">
           <p style="margin:0;">${CONTACT.address.line}<br>
-          <a href="tel:${CONTACT.whatsapp.tel}" style="color:#4586ff;text-decoration:none;">WhatsApp ${CONTACT.whatsapp.display}</a> ·
+          <a href="tel:${CONTACT.whatsapp.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.whatsapp.label} ${CONTACT.whatsapp.display} ${CONTACT.whatsapp.recommendedLabel}</a> ·
           <a href="tel:${CONTACT.practicePhone.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.practicePhone.display}</a> ·
           <a href="mailto:${CONTACT.email}" style="color:#4586ff;text-decoration:none;">${CONTACT.email}</a></p>
         </td></tr>
@@ -78,7 +78,7 @@ function confirmationEmailHtml(payload: ContactMailPayload) {
       <p style="margin:0;font-size:14px;line-height:1.7;color:#374151;white-space:pre-wrap;">${escapeHtml(payload.message)}</p>
     </div>
     <p style="margin:20px 0 0;font-size:14px;line-height:1.7;color:#374151;">
-      Spoed of liever bellen? WhatsApp <a href="tel:${CONTACT.whatsapp.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.whatsapp.display}</a>
+      Spoed of liever bellen? ${CONTACT.whatsapp.label} <a href="tel:${CONTACT.whatsapp.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.whatsapp.display}</a> ${CONTACT.whatsapp.recommendedLabel}
       of bel <a href="tel:${CONTACT.practicePhone.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.practicePhone.display}</a>.
     </p>
     <p style="margin:16px 0 0;font-size:14px;">

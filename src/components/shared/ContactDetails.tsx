@@ -1,5 +1,5 @@
 import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
-import { CONTACT } from '@/lib/contact-info'
+import { CONTACT, whatsappContactLine } from '@/lib/contact-info'
 
 type ContactDetailsProps = {
   variant?: 'sidebar' | 'inline' | 'footer'
@@ -29,9 +29,7 @@ export default function ContactDetails({
           <div>
             <p className="text-xs text-gray-600 mb-0.5">
               {CONTACT.whatsapp.label}{' '}
-              {CONTACT.whatsapp.recommended && (
-                <span className="text-primary font-medium">(aanbevolen)</span>
-              )}
+              <span className="text-primary font-medium">{CONTACT.whatsapp.recommendedLabel}</span>
             </p>
             <p className="text-gray-900 font-medium">{CONTACT.whatsapp.display}</p>
           </div>
@@ -90,7 +88,7 @@ export default function ContactDetails({
           rel="noopener noreferrer"
           className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-2 min-h-11 flex items-center touch-manipulation"
         >
-          WhatsApp: {CONTACT.whatsapp.display}
+          {whatsappContactLine()}
         </a>
         <a
           href={`tel:${CONTACT.practicePhone.tel}`}
@@ -120,10 +118,8 @@ export default function ContactDetails({
       >
         <MessageCircle className="w-4 h-4 shrink-0" />
         <span>
-          {CONTACT.whatsapp.label}: {CONTACT.whatsapp.display}
-          {CONTACT.whatsapp.recommended && (
-            <span className="text-primary font-medium"> (aanbevolen)</span>
-          )}
+          {CONTACT.whatsapp.label}: {CONTACT.whatsapp.display}{' '}
+          <span className="text-primary font-medium">{CONTACT.whatsapp.recommendedLabel}</span>
         </span>
       </a>
       <a

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import ContactForm from '@/components/shared/ContactForm'
+import PageHero from '@/components/shared/PageHero'
 
 const kernwaarden = [
   {
@@ -40,26 +41,33 @@ export default function Visie() {
 
   return (
     <>
-      <section className="page-hero page-hero--center relative">
-        <div className="page-hero__bg" />
-        <div className="relative page-container">
-          <div className="eyebrow eyebrow--center">
-            <span className="eyebrow__dot" />
-            <span className="eyebrow__label">Missie &amp; Visie</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
-            Bij BeYou sta jij altijd<br /><span className="text-primary">centraal</span>
-          </h1>
-          <p className="text-gray-600 max-w-lg mx-auto text-base leading-relaxed mb-8">
-            Vanuit de principes van Positieve Gezondheid werken we samen aan herstel, balans en duurzame vitaliteit. Persoonlijk, integraal en met echte aandacht.
-          </p>
-          <Link href="/contact"
-            className="bg-primary text-white px-8 py-3.5 text-sm font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg inline-block"
-          >
-            Maak een afspraak
-          </Link>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Missie & Visie"
+        title={
+          <>
+            Bij BeYou sta jij altijd
+            <br />
+            <span className="text-gradient">centraal</span>
+          </>
+        }
+        description="Vanuit de principes van Positieve Gezondheid werken we samen aan herstel, balans en duurzame vitaliteit. Persoonlijk, integraal en met echte aandacht."
+        primaryCta={{ label: 'Maak een afspraak', href: '/contact' }}
+        secondaryCta={{ label: 'Ontmoet het team', href: '/fysiotherapeuten' }}
+        highlights={[
+          {
+            title: 'Positieve Gezondheid',
+            description: 'Lichaam, geest en leefstijl als één geheel. Niet alleen klachten, maar wat jij belangrijk vindt.',
+          },
+          {
+            title: 'Persoonlijk behandelplan',
+            description: 'Afgestemd op jouw doelen, dagelijks leven en tempo. Geen standaard protocol, wel echte begeleiding.',
+          },
+          {
+            title: 'Lokaal in Schipluiden',
+            description: 'Laagdrempelig, warm en bereikbaar. Direct contact, zonder verwijzing en zonder wachttijd.',
+          },
+        ]}
+      />
 
       {/* Missie */}
       <section className="page-section">
@@ -153,8 +161,8 @@ export default function Visie() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {kernwaarden.map((k) => (
               <div key={k.title} className="card-hover glass-card p-7 rounded-2xl bg-white border border-gray-200">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">{k.title}</h3>
-                <p className="text-xs text-gray-700 leading-relaxed">{k.description}</p>
+                <h3 className="font-semibold text-gray-900 text-base mb-2">{k.title}</h3>
+                <p className="text-sm text-gray-700 leading-relaxed">{k.description}</p>
               </div>
             ))}
           </div>
