@@ -1,5 +1,5 @@
 import sgMail from '@sendgrid/mail'
-import { contactPhoneSummary, CONTACT } from './contact-info'
+import { CONTACT } from './contact-info'
 
 const SITE_NAME = 'Fysiotherapie BeYou'
 const SITE_URL = (process.env.SITE_URL ?? 'https://www.fysiotherapiebeyou.nl').replace(/\/$/, '')
@@ -66,23 +66,36 @@ function staffEmailHtml(payload: ContactMailPayload) {
 function confirmationEmailHtml(payload: ContactMailPayload) {
   const firstName = payload.name.trim().split(/\s+/)[0] || payload.name
   return emailLayout(`
-    <h1 style="margin:0 0 12px;font-size:22px;font-weight:700;color:#111827;">Bedankt voor je bericht, ${escapeHtml(firstName)}!</h1>
+    <h1 style="margin:0 0 16px;font-size:22px;font-weight:700;color:#111827;">Beste ${escapeHtml(firstName)},</h1>
     <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#374151;">
-      We hebben je bericht in goede orde ontvangen. We nemen doorgaans <strong>binnen één werkdag</strong> contact met je op.
+      Bedankt voor uw aanvraag bij Fysiotherapie BeYou.
     </p>
-    <p style="margin:0 0 20px;font-size:14px;line-height:1.7;color:#6b7280;">
-      Geen verwijzing nodig — je kunt altijd direct bij ons terecht voor fysiotherapie, training of leefstijlcoaching.
+    <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#374151;">
+      Wij hebben uw aanvraag in goede orde ontvangen. Een van onze medewerkers neemt zo spoedig mogelijk
+      contact met u op om uw hulpvraag te bespreken en, indien gewenst, direct een afspraak in te plannen.
+    </p>
+    <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#374151;">
+      Wij streven ernaar om <strong>binnen 24 uur</strong> contact met u op te nemen. In uitzonderlijke gevallen
+      kan dit door drukte of andere omstandigheden oplopen tot 48 uur. Uiteraard doen wij ons uiterste best
+      om u zo snel mogelijk te helpen.
+    </p>
+    <p style="margin:0 0 20px;font-size:15px;line-height:1.7;color:#374151;">
+      In de tussentijd kunt u alvast een kijkje nemen op onze
+      <a href="${SITE_URL}/blog" style="color:#4586ff;text-decoration:none;font-weight:600;">blogpagina</a>.
+      Hier vindt u praktische informatie en tips over veelvoorkomende klachten, behandelingen en gezondheid.
     </p>
     <div style="padding:16px;background:#f9fafb;border-radius:12px;border:1px solid #e5e7eb;">
-      <p style="margin:0 0 8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#6b7280;">Jouw bericht</p>
+      <p style="margin:0 0 8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#6b7280;">Uw bericht</p>
       <p style="margin:0;font-size:14px;line-height:1.7;color:#374151;white-space:pre-wrap;">${escapeHtml(payload.message)}</p>
     </div>
-    <p style="margin:20px 0 0;font-size:14px;line-height:1.7;color:#374151;">
-      Spoed of liever bellen? ${CONTACT.whatsapp.label} <a href="tel:${CONTACT.whatsapp.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.whatsapp.display}</a> ${CONTACT.whatsapp.recommendedLabel}
-      of bel <a href="tel:${CONTACT.practicePhone.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.practicePhone.display}</a>.
+    <p style="margin:24px 0 0;font-size:15px;line-height:1.7;color:#374151;">
+      Met vriendelijke groet,<br>
+      <strong>Team Fysiotherapie BeYou</strong>
     </p>
-    <p style="margin:16px 0 0;font-size:14px;">
-      <a href="${SITE_URL}" style="display:inline-block;background:#4586ff;color:#ffffff;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;font-size:14px;">Bezoek onze website</a>
+    <p style="margin:16px 0 0;font-size:14px;line-height:1.8;color:#374151;">
+      WhatsApp: <a href="${CONTACT.whatsapp.waMe}" style="color:#4586ff;text-decoration:none;">${CONTACT.whatsapp.display}</a><br>
+      E-mail: <a href="mailto:${CONTACT.email}" style="color:#4586ff;text-decoration:none;">${CONTACT.email}</a><br>
+      Website: <a href="${SITE_URL}" style="color:#4586ff;text-decoration:none;">www.fysiotherapiebeyou.nl</a>
     </p>
   `)
 }
@@ -125,18 +138,29 @@ export async function sendContactEmails(payload: ContactMailPayload) {
       to: { email: payload.email, name: payload.name },
       from: { email: fromEmail, name: fromName },
       replyTo: { email: contactEmail, name: fromName },
-      subject: `Bevestiging van je bericht — ${SITE_NAME}`,
+      subject: `Bevestiging van uw aanvraag — ${SITE_NAME}`,
       html: confirmationEmailHtml(payload),
       text: [
-        `Bedankt voor je bericht, ${payload.name.split(/\s+/)[0] || payload.name}!`,
+        `Beste ${payload.name.split(/\s+/)[0] || payload.name},`,
         '',
-        'We hebben je bericht ontvangen en nemen doorgaans binnen één werkdag contact met je op.',
+        'Bedankt voor uw aanvraag bij Fysiotherapie BeYou.',
         '',
-        'Jouw bericht:',
+        'Wij hebben uw aanvraag in goede orde ontvangen. Een van onze medewerkers neemt zo spoedig mogelijk contact met u op om uw hulpvraag te bespreken en, indien gewenst, direct een afspraak in te plannen.',
+        '',
+        'Wij streven ernaar om binnen 24 uur contact met u op te nemen. In uitzonderlijke gevallen kan dit door drukte of andere omstandigheden oplopen tot 48 uur. Uiteraard doen wij ons uiterste best om u zo snel mogelijk te helpen.',
+        '',
+        `In de tussentijd kunt u alvast een kijkje nemen op onze blogpagina: ${SITE_URL}/blog. Hier vindt u praktische informatie en tips over veelvoorkomende klachten, behandelingen en gezondheid.`,
+        '',
+        'Uw bericht:',
         payload.message,
         '',
-        contactPhoneSummary(),
-        `Website: ${SITE_URL}`,
+        'Met vriendelijke groet,',
+        '',
+        'Team Fysiotherapie BeYou',
+        '',
+        `WhatsApp: ${CONTACT.whatsapp.display}`,
+        `E-mail: ${CONTACT.email}`,
+        'Website: www.fysiotherapiebeyou.nl',
       ].join('\n'),
     },
   ])
