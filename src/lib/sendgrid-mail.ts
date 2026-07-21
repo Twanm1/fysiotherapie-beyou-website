@@ -28,9 +28,18 @@ function emailLayout(content: string) {
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f3f4f6;padding:32px 16px;">
     <tr><td align="center">
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e5e7eb;">
-        <tr><td style="background:linear-gradient(135deg,#4586ff,#2563eb);padding:24px 28px;">
-          <p style="margin:0;font-size:18px;font-weight:700;color:#ffffff;">${SITE_NAME}</p>
-          <p style="margin:6px 0 0;font-size:13px;color:rgba(255,255,255,0.9);">Schipluiden</p>
+        <tr><td style="background:linear-gradient(135deg,#4586ff,#2563eb);padding:20px 28px;">
+          <table role="presentation" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="vertical-align:middle;padding-right:14px;">
+                <img src="${SITE_URL}/images/logo.png" alt="${SITE_NAME}" width="44" height="44" style="display:block;width:44px;height:44px;border-radius:10px;background:#ffffff;padding:4px;">
+              </td>
+              <td style="vertical-align:middle;">
+                <p style="margin:0;font-size:18px;font-weight:700;color:#ffffff;">${SITE_NAME}</p>
+                <p style="margin:4px 0 0;font-size:13px;color:rgba(255,255,255,0.9);">Schipluiden</p>
+              </td>
+            </tr>
+          </table>
         </td></tr>
         <tr><td style="padding:28px;">${content}</td></tr>
         <tr><td style="padding:0 28px 24px;font-size:12px;line-height:1.6;color:#6b7280;">
