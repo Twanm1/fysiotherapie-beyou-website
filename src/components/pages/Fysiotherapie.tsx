@@ -162,7 +162,7 @@ export default function Fysiotherapie() {
                 <h3 className="text-sm font-semibold text-gray-900 mb-4">Contactgegevens</h3>
                 <ContactDetails variant="inline" />
                 <Link href="/contact"
-                  className="bg-primary text-white w-full mt-5 py-3 text-sm font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg block text-center"
+                  className="bg-primary text-white w-full mt-5 py-3.5 min-h-11 text-sm font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.98] block text-center touch-manipulation"
                 >
                   Maak een afspraak
                 </Link>

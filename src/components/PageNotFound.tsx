@@ -20,7 +20,7 @@ export default function PageNotFound() {
         </p>
         <Link
           href="/"
-          className="bg-primary text-white px-7 py-3 text-sm font-semibold rounded-full hover:bg-primary/85 transition-all duration-200 shadow-md inline-block mb-8"
+          className="bg-primary text-white px-7 py-3.5 min-h-11 text-sm font-semibold rounded-full hover:bg-primary/90 transition-all duration-200 shadow-md hover:shadow-lg active:scale-[0.98] inline-block mb-8 touch-manipulation"
         >
           Terug naar home
         </Link>
@@ -29,7 +29,7 @@ export default function PageNotFound() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-primary hover:text-primary/80 px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 transition-colors"
+              className="text-sm font-medium text-primary hover:text-primary/80 px-4 py-2.5 min-h-11 inline-flex items-center rounded-full border border-primary/20 hover:bg-primary/5 transition-colors touch-manipulation"
             >
               {link.label}
             </Link>

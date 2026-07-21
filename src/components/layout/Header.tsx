@@ -84,7 +84,7 @@ export default function Header() {
             <Link
               href="/contact"
               prefetch={false}
-              className="bg-primary hover:bg-primary/85 text-white px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-200 inline-block shadow-md hover:shadow-xl hover:scale-105"
+              className="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-200 inline-block shadow-md hover:shadow-lg active:scale-[0.98]"
             >
               Maak een afspraak
             </Link>
@@ -131,7 +131,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 prefetch={false}
-                className="bg-primary hover:bg-primary/85 text-white w-full py-3.5 text-base font-semibold rounded-full transition-all duration-200 block text-center shadow-md hover:shadow-lg active:scale-95 touch-manipulation"
+                className="bg-primary hover:bg-primary/90 text-white w-full py-3.5 text-base font-semibold rounded-full transition-all duration-200 block text-center shadow-md hover:shadow-lg active:scale-[0.98] touch-manipulation"
               >
                 Maak een afspraak
               </Link>

@@ -41,7 +41,7 @@ export default function HeroSection() {
               </Link>
               <Link
                 href="/visie"
-                className="px-6 py-3.5 text-sm font-medium rounded-full border border-gray-300 text-gray-900 hover:bg-gray-50 transition-all duration-200 text-center min-h-11 flex items-center justify-center touch-manipulation w-full sm:w-auto"
+                className="px-6 py-3.5 text-sm font-semibold rounded-full border border-gray-300 text-gray-900 hover:bg-gray-50 hover:border-gray-400 active:scale-[0.98] transition-all duration-200 text-center min-h-11 flex items-center justify-center touch-manipulation w-full sm:w-auto"
               >
                 Over ons
               </Link>

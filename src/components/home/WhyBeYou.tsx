@@ -31,7 +31,7 @@ export default function WhyBeYou() {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-              <span className="text-sm font-medium text-gray-600">Over ons</span>
+              <span className="text-xs uppercase font-semibold tracking-widest text-gray-600">Over ons</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 leading-tight mb-8 sm:mb-12">
               Waarom Fysiotherapie<br />BeYou?
@@ -53,7 +53,7 @@ export default function WhyBeYou() {
 
             <div className="mt-8 sm:mt-12">
               <Link href="/visie"
-                className="bg-primary text-white px-6 sm:px-7 py-3.5 text-sm font-semibold rounded-lg hover:bg-primary/85 transition-all duration-200 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 inline-block w-full sm:w-auto text-center"
+                className="bg-primary text-white px-6 sm:px-7 py-3.5 text-sm font-semibold rounded-full hover:bg-primary/90 transition-all duration-200 shadow-md hover:shadow-lg active:scale-[0.98] inline-block w-full sm:w-auto text-center min-h-11 touch-manipulation"
               >
                 Onze visie
               </Link>

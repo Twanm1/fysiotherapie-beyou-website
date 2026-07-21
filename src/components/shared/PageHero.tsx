@@ -81,10 +81,7 @@ export default function PageHero({
                   </Link>
                 )}
                 {secondaryCta && (
-                  <Link
-                    href={secondaryCta.href}
-                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold rounded-full bg-white/70 backdrop-blur text-gray-900 hover:bg-white transition-all duration-300 min-h-11 w-full sm:w-auto touch-manipulation shadow-sm"
-                  >
+                  <Link href={secondaryCta.href} className="page-hero-premium__cta-secondary">
                     {secondaryCta.label}
                   </Link>
                 )}

@@ -8,7 +8,7 @@ export default function IntroSection() {
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
           <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-          <span className="text-sm font-medium text-gray-600">Fysiotherapie BeYou</span>
+          <span className="text-xs uppercase font-semibold tracking-widest text-gray-600">Fysiotherapie BeYou</span>
         </div>
         <blockquote className="mb-8 sm:mb-12">
           <p className="text-3xl font-bold tracking-tight text-primary leading-normal sm:text-4xl md:text-5xl lg:text-6xl">

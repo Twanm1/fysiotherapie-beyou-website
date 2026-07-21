@@ -86,7 +86,7 @@ export default function Visie() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-                <span className="text-sm text-gray-600">Onze missie</span>
+                <span className="text-xs uppercase font-semibold tracking-widest text-gray-600">Onze missie</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Jouw zorgvraag, onze uitdaging</h2>
               <div className="space-y-6">
@@ -121,7 +121,7 @@ export default function Visie() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-                <span className="text-sm text-gray-600">Onze visie</span>
+                <span className="text-xs uppercase font-semibold tracking-widest text-gray-600">Onze visie</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Gepassioneerd over de weg naar gezondheid en levensgeluk.</h2>
               <ul className="space-y-4 text-sm text-gray-700 mb-8">
@@ -155,7 +155,7 @@ export default function Visie() {
         <div className="page-container">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-            <span className="text-sm text-gray-600">Onze waarden</span>
+            <span className="text-xs uppercase font-semibold tracking-widest text-gray-600">Onze waarden</span>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Kernwaarden die onze missie dragen</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -174,7 +174,7 @@ export default function Visie() {
         <div className="page-container">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-            <span className="text-sm text-gray-600">Team</span>
+            <span className="text-xs uppercase font-semibold tracking-widest text-gray-600">Team</span>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Maak kennis met onze Fysiotherapeuten</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl">

@@ -35,7 +35,7 @@ export default function Disclaimer() {
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-            <span className="text-sm font-medium text-gray-600">Juridisch</span>
+            <span className="text-xs uppercase font-semibold tracking-widest text-gray-600">Juridisch</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Disclaimer</h1>
           <p className="text-sm text-gray-500">Fysiotherapie Be You · Schipluiden</p>

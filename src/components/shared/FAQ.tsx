@@ -38,7 +38,7 @@ export default function FAQ() {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-              <span className="text-sm font-medium text-gray-600">Veelgestelde vragen</span>
+              <span className="text-xs uppercase font-semibold tracking-widest text-gray-600">Veelgestelde vragen</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
               Alles wat je<br />wilt weten

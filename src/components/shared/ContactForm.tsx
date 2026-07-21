@@ -75,12 +75,12 @@ export default function ContactForm({ source = 'fysiotherapiebeyou', formTitle =
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-                      <span className="text-sm font-medium text-gray-600">Contact</span>
+                      <span className="text-xs uppercase font-semibold tracking-widest text-gray-600">Contact</span>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">{formTitle}</h2>
                   </div>
                   {error && (
-                    <div className="flex gap-3 p-4 rounded-lg bg-red-50 border border-red-200 mb-8">
+                    <div role="alert" className="flex gap-3 p-4 rounded-xl bg-red-50 border border-red-200 mb-8">
                       <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                       <div>
                         <p className="text-sm font-medium text-red-900 mb-1">Oops, er is iets mis gegaan</p>
@@ -157,7 +157,7 @@ export default function ContactForm({ source = 'fysiotherapiebeyou', formTitle =
                     <button
                       type="submit"
                       disabled={loading}
-                      className="bg-primary text-white px-8 py-3.5 text-base sm:text-sm font-semibold rounded-full hover:bg-primary/85 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-200 w-full shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-95 touch-manipulation"
+                      className="bg-primary text-white px-8 py-3.5 text-base sm:text-sm font-semibold rounded-full hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-200 w-full min-h-11 shadow-md hover:shadow-lg active:scale-[0.98] touch-manipulation"
                     >
                       {loading ? 'Bericht wordt verzonden...' : 'Verstuur bericht'}
                     </button>

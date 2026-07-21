@@ -96,7 +96,7 @@ function FysiotherapeutDetail({ member }: { member: TeamMember }) {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-                <span className="text-sm text-gray-600">{member.role}</span>
+                <span className="text-sm font-medium text-gray-600">{member.role}</span>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{member.name}</h1>
 
@@ -158,7 +158,7 @@ function FysiotherapeutDetail({ member }: { member: TeamMember }) {
 
               <div className="mt-8">
                 <Link href="/contact"
-                  className="bg-primary text-white px-7 py-3.5 text-sm font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg inline-block"
+                  className="bg-primary text-white px-7 py-3.5 min-h-11 text-sm font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.98] inline-block touch-manipulation"
                 >
                   Maak een afspraak
                 </Link>
