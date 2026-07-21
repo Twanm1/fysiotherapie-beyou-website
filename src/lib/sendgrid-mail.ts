@@ -34,10 +34,7 @@ function emailLayout(content: string) {
         </td></tr>
         <tr><td style="padding:28px;">${content}</td></tr>
         <tr><td style="padding:0 28px 24px;font-size:12px;line-height:1.6;color:#6b7280;">
-          <p style="margin:0;">${CONTACT.address.line}<br>
-          <a href="tel:${CONTACT.whatsapp.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.whatsapp.label} ${CONTACT.whatsapp.display} ${CONTACT.whatsapp.recommendedLabel}</a> ·
-          <a href="tel:${CONTACT.practicePhone.tel}" style="color:#4586ff;text-decoration:none;">${CONTACT.practicePhone.display}</a> ·
-          <a href="mailto:${CONTACT.email}" style="color:#4586ff;text-decoration:none;">${CONTACT.email}</a></p>
+          <p style="margin:0;">${CONTACT.address.line}</p>
         </td></tr>
       </table>
     </td></tr>
