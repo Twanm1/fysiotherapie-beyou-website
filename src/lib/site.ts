@@ -7,13 +7,13 @@ export const TEAM_MEMBERS = [
   {
     name: 'Twan Mosch',
     role: 'Fysiotherapeut/Leefstijlcoach',
-    image: 'https://framerusercontent.com/images/0elBPCnVPoUS5prUTLUTjJqpI8.png?width=1080&height=1080',
+    image: '/images/team/twan-mosch.png',
     slug: 'twan-mosch',
   },
   {
     name: 'Mariana Cobo',
     role: 'Fysiotherapeut',
-    image: 'https://framerusercontent.com/images/xKg3KCie4yhQiZkpkuFJEPQVsI.png?width=1080&height=1080',
+    image: '/images/team/mariana-cobo.png',
     slug: 'mariana-cobo',
   },
 ] as const

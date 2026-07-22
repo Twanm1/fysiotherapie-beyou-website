@@ -28,31 +28,31 @@ export const GOOGLE_REVIEWS_FALLBACK: GoogleReview[] = [
   {
     name: 'Donna van der Helm',
     text: 'Twan heeft mij uitstekend geholpen met mijn knieklachten. Hij nam de tijd, luisterde goed en gaf gerichte oefeningen die echt effect hadden.',
-    image: 'https://framerusercontent.com/images/2FqHJJShwmi2uBzD6juaL95pY.jpg?width=200&height=200',
+    image: '/images/reviews/review-1.jpg',
     rating: 5,
   },
   {
     name: 'Freek van Vliet',
     text: 'Bij Be You kreeg ik de persoonlijke begeleiding die ik nodig had. Dankzij de gerichte behandelingen en duidelijke uitleg ben ik klachtenvrij en durf ik weer volop te bewegen.',
-    image: 'https://framerusercontent.com/images/nF1Kv7AMi8Yo1VU868YzmZyE4uY.jpg?width=200&height=200',
+    image: '/images/reviews/review-2.jpg',
     rating: 5,
   },
   {
     name: 'Woodrow Currain',
     text: 'Bedankt voor de duidelijke informatie en het fijne advies over mijn enkelklachten. Ik voelde me goed geholpen en serieus genomen.',
-    image: 'https://framerusercontent.com/images/eZA47EJ7TWc4cUX0QmSylsVY31w.jpeg?width=200&height=200',
+    image: '/images/reviews/review-3.jpeg',
     rating: 5,
   },
   {
     name: 'Gil Amsalam',
     text: 'Ik heb een prettige behandeling gehad bij Twan, die na één sessie voorstelde om samen met een collega naar mijn klachten te kijken. Dat gaf mij het gevoel dat er echt aandacht was voor mijn situatie.',
-    image: 'https://framerusercontent.com/images/5U69mRhqxWCtgIDyZCAWa3WM0E.png?width=200&height=200',
+    image: '/images/reviews/review-4.png',
     rating: 5,
   },
   {
     name: 'Dean Rideway',
     text: 'Ik kon snel terecht voor een afspraak en kreeg een duidelijke uitleg. Een fijne en toegankelijke praktijk waar je je direct op je gemak voelt.',
-    image: 'https://framerusercontent.com/images/iXhy6mLFN9VnpJ9QO7Qcsg87CE.png?width=200&height=200',
+    image: '/images/reviews/review-5.png',
     rating: 5,
   },
 ]

@@ -7,19 +7,19 @@ const steps = [
     number: '01',
     title: 'Intake & Onderzoek',
     description: 'We brengen jouw hulpvraag, klachten en bewegingspatroon zorgvuldig in kaart.',
-    image: 'https://framerusercontent.com/images/h6H6dHQkfLbUdJJrvGCa5xcAhE.png?width=1920&height=1080',
+    image: '/images/process/intake.png',
   },
   {
     number: '02',
     title: 'Uitleg & Behandelplan',
     description: 'Je krijgt een heldere uitleg over de oorzaak van jouw klachten en een behandelplan op maat.',
-    image: 'https://framerusercontent.com/images/Od7J3qkYjpHxbeTl40IwCzeZNRs.png?width=1920&height=1080',
+    image: '/images/process/behandeling.png',
   },
   {
     number: '03',
     title: 'Behandeling & Afronding',
     description: 'Herstel is het begin – indien gewenst begeleiden we je ook in het versterken van jouw balans en weerbaarheid.',
-    image: 'https://framerusercontent.com/images/HeVF9P9zYYbHOpQqdCiwHtpGdv0.png?width=1920&height=1080',
+    image: '/images/process/resultaat.png',
   },
 ];
 

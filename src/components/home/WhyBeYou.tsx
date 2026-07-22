@@ -63,7 +63,7 @@ export default function WhyBeYou() {
           {/* Right: foto */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl">
             <img
-              src="https://framerusercontent.com/images/02Jfv1EpHZhegtMcINrpOJXBagk.jpeg?width=1600&height=1200"
+              src="/images/why-beyou.jpeg"
               alt="Fysiotherapie BeYou behandeling"
               className="w-full h-[280px] sm:h-[380px] md:h-[480px] object-cover"
               loading="lazy"
@@ -73,8 +73,8 @@ export default function WhyBeYou() {
             <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
               <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 sm:px-5 py-3 sm:py-4 shadow-lg flex items-center gap-3 sm:gap-4">
                 <div className="flex -space-x-1.5 sm:-space-x-2">
-                  <img src="https://framerusercontent.com/images/0elBPCnVPoUS5prUTLUTjJqpI8.png?width=200&height=200" className="w-7 h-7 sm:w-9 sm:h-9 rounded-full object-cover object-top border-2 border-white" alt="Twan" />
-                  <img src="https://framerusercontent.com/images/xKg3KCie4yhQiZkpkuFJEPQVsI.png?width=200&height=200" className="w-7 h-7 sm:w-9 sm:h-9 rounded-full object-cover object-top border-2 border-white" alt="Mariana" />
+                  <img src="/images/team/twan-mosch.png" className="w-7 h-7 sm:w-9 sm:h-9 rounded-full object-cover object-top border-2 border-white" alt="Twan" />
+                  <img src="/images/team/mariana-cobo.png" className="w-7 h-7 sm:w-9 sm:h-9 rounded-full object-cover object-top border-2 border-white" alt="Mariana" />
                 </div>
                 <div>
                   <p className="text-xs font-semibold text-gray-900">Persoonlijke begeleiding</p>

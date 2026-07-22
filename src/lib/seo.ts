@@ -56,7 +56,7 @@ export const medicalBusinessJsonLd = {
   '@type': 'MedicalBusiness',
   name: SITE_NAME,
   url: SITE_URL,
-  logo: 'https://framerusercontent.com/images/39T3NYh2RTzdtqcUOLKHcbYTs.png',
+  logo: `${SITE_URL}/images/logo.png`,
   image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
   description:
     'Fysiotherapie BeYou in Schipluiden biedt persoonlijke fysiotherapie, leefstijlcoaching (GLI) en begeleide trainingen.',
@@ -119,7 +119,7 @@ export function blogPostingJsonLd(post: BlogPostingInput) {
       name: SITE_NAME,
       logo: {
         '@type': 'ImageObject',
-        url: 'https://framerusercontent.com/images/39T3NYh2RTzdtqcUOLKHcbYTs.png',
+        url: `${SITE_URL}/images/logo.png`,
       },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.slug}` },

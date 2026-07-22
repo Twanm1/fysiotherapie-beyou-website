@@ -56,7 +56,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2.5 min-w-0 shrink" prefetch={false}>
             <img
-              src="https://framerusercontent.com/images/39T3NYh2RTzdtqcUOLKHcbYTs.png?width=64&height=64"
+              src="/images/logo.png"
               alt="BeYou logo"
               className="w-8 h-8 object-contain shrink-0"
             />

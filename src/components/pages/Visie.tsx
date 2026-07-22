@@ -25,13 +25,13 @@ const team = [
   {
     name: 'Twan Mosch',
     role: 'Fysiotherapeut/Leefstijlcoach',
-    image: 'https://framerusercontent.com/images/0elBPCnVPoUS5prUTLUTjJqpI8.png?width=1080&height=1080',
+    image: '/images/team/twan-mosch.png',
     link: '/fysiotherapeuten/twan-mosch',
   },
   {
     name: 'Mariana Cobo',
     role: 'Fysiotherapeut',
-    image: 'https://framerusercontent.com/images/xKg3KCie4yhQiZkpkuFJEPQVsI.png?width=1080&height=1080',
+    image: '/images/team/mariana-cobo.png',
     link: '/fysiotherapeuten/mariana-cobo',
   },
 ];
@@ -75,7 +75,7 @@ export default function Visie() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="https://framerusercontent.com/images/maQyCl9FjrcMCG7Dm0zrNi6TwV4.jpeg?width=1200&height=1600"
+                src="/images/visie-team.jpeg"
                 alt="BeYou team"
                 className="w-full h-[280px] sm:h-[360px] md:h-[420px] lg:h-[480px] object-cover object-top"
                 loading="eager"
@@ -140,7 +140,7 @@ export default function Visie() {
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://framerusercontent.com/images/nNRvmoF8aMBIOABiK3D9eCAD70.png?width=1024&height=1024"
+                src="/images/visie-icon.png"
                 alt="Positieve gezondheid"
                 className="w-full max-w-sm h-80 object-contain"
                 loading="lazy"

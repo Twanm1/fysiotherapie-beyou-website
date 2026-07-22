@@ -42,7 +42,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">{post.title}</h1>
           <div className="flex items-center justify-center gap-3">
             <img
-              src="https://framerusercontent.com/images/0elBPCnVPoUS5prUTLUTjJqpI8.png?width=120&height=120"
+              src="/images/team/twan-mosch.png"
               alt="Twan Mosch"
               className="w-10 h-10 rounded-full object-cover object-top"
             />

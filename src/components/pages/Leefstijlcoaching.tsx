@@ -163,7 +163,7 @@ export default function Leefstijlcoaching() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
                     <img
-                      src="https://framerusercontent.com/images/0elBPCnVPoUS5prUTLUTjJqpI8.png?width=200&height=200"
+                      src="/images/team/twan-mosch.png"
                       alt="Twan Mosch"
                       className="w-12 h-12 rounded-full object-cover object-top"
                     />

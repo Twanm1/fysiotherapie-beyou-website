@@ -14,7 +14,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <img
-                src="https://framerusercontent.com/images/39T3NYh2RTzdtqcUOLKHcbYTs.png?width=64&height=64"
+                src="/images/logo.png"
                 alt="BeYou logo"
                 className="w-8 h-8 object-contain"
               />

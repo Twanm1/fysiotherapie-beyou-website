@@ -18,7 +18,6 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      { protocol: 'https', hostname: 'framerusercontent.com' },
       { protocol: 'https', hostname: 'www.fysiotherapiebeyou.nl' },
       { protocol: 'https', hostname: 'lh3.googleusercontent.com' },
       { protocol: 'https', hostname: 'ui-avatars.com' },
