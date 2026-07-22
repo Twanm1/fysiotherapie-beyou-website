@@ -37,11 +37,11 @@ export default function Fysiotherapeuten({ member }: FysiotherapeutenProps) {
             {TEAM_MEMBERS.map((member) => (
               <Link key={member.name} href={`/fysiotherapeuten/${member.slug}`} className="group block">
                 <div className="card-hover glass-card rounded-2xl overflow-hidden bg-white border border-gray-200">
-                  <div className="overflow-hidden h-80">
+                  <div className="overflow-hidden h-80 bg-gray-100">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover object-[center_12%] scale-[0.88] origin-center group-hover:scale-[0.92] transition-transform duration-500"
                       loading="lazy"
                     />
                   </div>
@@ -84,11 +84,11 @@ function FysiotherapeutDetail({ member }: { member: TeamMember }) {
         <div className="relative page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden">
+              <div className="rounded-2xl overflow-hidden bg-gray-100">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-[320px] sm:h-[420px] lg:h-[500px] object-cover object-[center_10%]"
+                  className="w-full h-[320px] sm:h-[420px] lg:h-[500px] object-cover object-[center_18%] scale-[0.92] origin-center"
                   loading="eager"
                 />
               </div>

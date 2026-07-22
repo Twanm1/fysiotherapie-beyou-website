@@ -181,7 +181,9 @@ export default function Visie() {
             {team.map((member) => (
               <Link key={member.name} href={member.link} className="group block">
                 <div className="card-hover glass-card rounded-2xl overflow-hidden bg-white border border-gray-200">
-                  <img src={member.image} alt={member.name} className="w-full h-64 object-cover object-top" loading="lazy" />
+                  <div className="overflow-hidden h-64 bg-gray-100">
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover object-[center_12%] scale-[0.88] origin-center transition-transform duration-500 group-hover:scale-[0.92]" loading="lazy" />
+                  </div>
                   <div className="px-5 py-4 flex items-center justify-between">
                     <div>
                       <p className="font-semibold text-gray-900 text-sm">{member.name}</p>
