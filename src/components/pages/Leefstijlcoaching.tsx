@@ -16,7 +16,7 @@ const verwachtingen = [
 ];
 
 const praktisch = [
-  'De definitieve startdata hoor je nog, dit zal eind februari/begin maart zijn',
+  'De definitieve startdata is per groep verschillend. Neem gerust contact op hierover.',
   'De groepsbijeenkomsten zullen op woensdagavond plaatsvinden',
   `Locatie: ${CONTACT.address.line}`,
 ];
